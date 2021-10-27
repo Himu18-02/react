@@ -8,7 +8,7 @@ import Album from './components/Album';
 
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
 
@@ -39,7 +39,7 @@ export default function App () {
       
         <>
         
-      <Router>
+      <Router basename= {process.env.PUBLIC_URL}>
       <Navbar  />
       <LoadingBar
         color='#f11946'
