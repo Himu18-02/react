@@ -54,7 +54,7 @@ export default class Home extends Component {
                         <Link to="/Post">Posts</Link>
                     </div>
                     <div className="btn col-md-12  col-sm-12 my-2">
-                        <Link to="albums">Albums</Link>
+                        <Link to="Album">Albums</Link>
                     </div>
 
 
