@@ -48,7 +48,6 @@ export default function App () {
      
      <Switch>
       <Route exact path = "/"><Home setProgress={setProgress}/></Route>
-   
       <Route  exact path="/Album"><Album setProgress={setProgress}/></Route>
       <Route  exact  path="/images"><ImageCard  setProgress={setProgress} /></Route>
       <Route  exact path = "/Post"><Post setProgress={setProgress} /></Route>
