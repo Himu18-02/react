@@ -1,25 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from './components/navbar';
+import Home from './components/home';
+import Post from './components/Post';
+import ImageCard from './components/ImageCard';
+import Album from './components/Album';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+
+} from "react-router-dom";
+import LoadingBar from 'react-top-loading-bar'
+import { useState} from 'react';
+
+
+export default function App () {
+
+
+  const [progress, setprogress] = useState(0)
+
+  
+
+  
+
+
+ const setProgress = (progress)=>{
+  setprogress(progress)
 }
 
-export default App;
+
+
+
+  
+    return (
+      
+        <>
+        
+      <Router>
+      <Navbar  />
+      <LoadingBar
+        color='#f11946'
+        progress={progress}
+      />    
+     
+     <Switch>
+      <Route exact path = "/"><Home setProgress={setProgress}/></Route>
+   
+      <Route  exact path="/Album"><Album setProgress={setProgress}/></Route>
+      <Route  exact  path="/images"><ImageCard  setProgress={setProgress} /></Route>
+      <Route  exact path = "/Post"><Post setProgress={setProgress} /></Route>
+      </Switch>
+     </Router>
+
+    
+    
+    </>
+      
+    )
+  
+}
+
