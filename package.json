@@ -1,7 +1,7 @@
 {
   "name": "intership",
   "version": "0.1.0",
-  "homepage": "https://Himu18-02.github.io/create-react",
+  "homepage": "https://Himu18-02.github.io/create-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
